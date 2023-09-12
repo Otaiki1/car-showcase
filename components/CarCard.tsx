@@ -6,6 +6,7 @@ import { CarProps } from "@/types";
 
 import { CustomButton } from ".";
 import { calculateCarRent } from "@/utils";
+import CarDetails from "./CarDetails";
 
 interface carCardProps {
   car: CarProps;
@@ -78,6 +79,11 @@ const CarCard = ({ car }: carCardProps) => {
           />
         </div>
       </div>
+      <CarDetails
+        isOpen={isOpen}
+        closeModal={() => setIsOpen(false)}
+        car={car}
+      />
     </div>
   );
 };
